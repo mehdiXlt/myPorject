@@ -89,7 +89,7 @@ const Contact =()=>{
                     </div>
                     
                     <div>
-                        <input type='submit' href='#' className='button button--flex'>
+                        <input type='submit' value='send message' className='button button--flex'>
                             Send Your Message
                             <IoSend className='button__icon'/>
                         </input>
