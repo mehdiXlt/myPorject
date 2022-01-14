@@ -1,10 +1,30 @@
-import TextArea from 'rc-textarea'
 import { BiEnvelope } from 'react-icons/bi'
 import { FiMapPin, FiPhone } from 'react-icons/fi'
 import { IoSend } from 'react-icons/io5'
 import '../../App.css'
 
+// ::: email js ::: //
+import React, { useRef } from 'react';
+import emailjs from 'emailjs';
+
+
 const Contact =()=>{
+
+    // email js //
+    const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('gmail', 'template_ktuzcds', form.current, 'user_kQTLNwDrcki75kcBBHXYc')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+
+      e.target.reset()
+  };
 
     return(
         <section className='contact section' id='contact'>
@@ -44,7 +64,7 @@ const Contact =()=>{
                     
                 </div>
 
-                <from action='' className='contact__form grid'>
+                <from ref={form} onSubmit={sendEmail} action='' className='contact__form grid'>
                     <div className='contact__inputs grid'>
                         <div className='contact__content'>
                             <label for='' className='contact__label'> Name</label>
@@ -69,10 +89,10 @@ const Contact =()=>{
                     </div>
                     
                     <div>
-                        <a href='#' className='button button--flex'>
+                        <input type='submit' href='#' className='button button--flex'>
                             Send Your Message
                             <IoSend className='button__icon'/>
-                        </a>
+                        </input>
                     </div>
                 </from>
             </div>
