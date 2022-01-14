@@ -1,0 +1,241 @@
+:root {
+  /* ======= color ======== */
+  /* --- change color --- */
+  --hue-color: 200;
+
+  /* ====== HSL Color ====== */
+  --first-color: hsl(var(--hue-color), 68%, 42%);
+  --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+  --title-color: hsl(var(--hue-color), 8%, 15%);
+  --text-color: hsl(var(--hue-color), 8%, 45%);
+  --text-color-lighter: hsl(var(--hue-color), 8%, 65%);
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --body-color: hsl(var(--hue-color), 60%, 99%);
+  --container-color: white;
+
+  /*  ===== font size =====  */
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.94rem;
+  --small-font-size: 0.81rem;
+  --smaller-font-size: 0.75rem;
+
+  /* ===== z-index ===== */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+.Logo__section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.logo__title {
+  margin-top: 4rem;
+  color: var(--first-color);
+  font-size: var(--h1-font-size);
+  margin-bottom: 0.2rem;
+}
+
+.logo__subtitle {
+  color: var(--text-color);
+  text-align: center;
+  font-size: var(--small-font-size);
+}
+
+.logo__content {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 4rem;
+  margin-left: 40px;
+}
+
+.logo__content-title {
+  color: var(--first-color);
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.logo__example {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 15px 20px;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.logo__example:hover {
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.logo__name {
+  color: var(--text-color);
+}
+
+.logo__arrow {
+  color: var(--first-color);
+}
+
+.logo__logo {
+  color: var(--text-color);
+}
+
+.logo__data {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo__data-title {
+  color: var(--first-color);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.logo__input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo__inputs {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  height: 2rem;
+  width: 100%;
+  text-align: start;
+  border: none;
+  border-radius: 5px;
+  padding-left: 5px;
+  background-color: var(--input-color);
+}
+
+.logo__inputs2 {
+  margin-bottom: 20px;
+  height: 2rem;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding-left: 5px;
+  background-color: var(--input-color);
+}
+
+.logo__button {
+  align-self: flex-start;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  justify-content: space-around;
+  font-size: 0.9rem;
+}
+
+.button__icon {
+  margin-left: 5px;
+}
+
+.back__home {
+  position: absolute;
+  top: 3%;
+  left: 9%;
+  color: var(--first-color);
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 1024px) {
+  .Logo__section {
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .logo__container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .logo__title {
+    margin-top: 0.5rem;
+  }
+
+  .logo__content-title {
+    font-size: 2em;
+    font-weight: 500;
+  }
+
+  .logo__content {
+    padding: 20px 40px;
+    border-radius: 10px;
+  }
+
+  .logo__example {
+    background-color: var(--input-color);
+  }
+
+  .logo__name,
+  .logo__arrow,
+  .logo__logo {
+    color: var(--text-color);
+    font-size: 1.5em;
+  }
+
+  .logo__logo:hover {
+    transform: scale(2);
+  }
+
+  .back__home {
+    cursor: pointer;
+  }
+
+  .logo__inputs {
+    width: 30rem;
+    height: 10vh;
+  }
+
+  .logo__inputs2 {
+    height: 10vh;
+  }
+
+  .logo__button:hover {
+    cursor: pointer;
+    background-color: var(--first-color-alt);
+  }
+}
+
+.logo__data {
+  font-size: 2em;
+}
